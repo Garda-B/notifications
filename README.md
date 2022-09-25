@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./notifications/Screenshot.JPG)
+![A screenshot of the completed challenge](./Screenshot.JPG)
 
 
 ### Links
