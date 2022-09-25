@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./notification/Screenshot.JPG)
+![](./notifications/Screenshot.JPG)
 
 
 ### Links
