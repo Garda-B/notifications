@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      background-color: hsl(210, 60%, 98%);
+    }
+
+    .comment {
+      display: flex;
+      padding: 10px;
+
+    }
+
+    .comment-text {
+      padding: 5px;
+      margin-left: 15px;
+      color: hsl(219, 14%, 63%);
+    }
+
+    nav {
+      display: flex;
+      padding: 20px;
+
+    }
+
+    nav p {
+      margin-top: 0px;
+
+    }
+
+    .totheright {
+      margin-left: auto;
+
+    }
+
+    .notification {
+      border-radius: 4px;
+      background-color: rgb(4, 47, 125);
+      width: 30px;
+      color: white;
+      text-align: center;
+      margin-left: 5px;
+      padding: 2px;
+    }
+
+    .wrapper {
+
+      margin: auto auto;
+      font-family: 'Plus Jakarta Sans';
+      background-color: hsl(0, 0%, 100%);
+      border-radius: 5px;
+
+    }
+
+    @media only screen and (min-width: 375px) {
+      .wrapper {
+        max-width: 500px;
+      }
+    }
+
+    @media only screen and (max-width: 1440px) {
+      .wrapper {
+        max-width: 700px;
+      }
+    }
+
+    .timepassed {
+
+      color: hsl(219, 14%, 63%)
+    }
+
+    .message {
+
+      margin-top: 10px;
+      border: 1px solid hsl(205, 33%, 90%);
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    .message:hover {
+      cursor: pointer;
+      background-color: hsl(205, 33%, 90%);
+
+
+    }
+
+    .name {
+      color: hsl(224, 21%, 14%);
+      font-weight: 800;
+    }
+
+    .name2 {
+      color: hsl(219, 12%, 42%);
+      font-weight: 800;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .unreadcomment {
+      background-color: hsl(210, 60%, 98%);
+      border-radius: 5px;
+
+    }
+
+    .dot {
+      background-color: hsl(1, 90%, 64%);
+      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+      display: inline-block;
+      margin-left: 5px;
+      margin-bottom: 3px;
+      align-self: center;
+    }
+
+    .name:hover,
+    .name2:hover,
+    .markallasread:hover {
+      color: hsl(219, 85%, 26%);
+      cursor: pointer;
+
+    }
+
+    .pichover:hover {
+      cursor: pointer;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav>
+      <div>Notifications</div>
+      <div id="note" class="notification"></div>
+      <div id="allread" class="totheright timepassed markallasread">Mark all as read</div>
+    </nav>
+
+    <section class="container">
+      <div class="comment unreadcomment">
+        <div><img src="assets\images\avatar-mark-webber.webp"
+            width="50px"></img></div>
+        <div class="comment-text"><span class="name">Mark Webber</span> reacted to your recent post <span
+            class="name2">My first tournament
+            today!</span><span class="dot nodot"></span>
+          <div class="timepassed">1m ago</div>
+        </div>
+      </div>
+
+      <div class="comment unreadcomment">
+        <div><img src="assets\images\avatar-angela-gray.webp"
+            width="50px"></img></div>
+        <div class="comment-text"><span class="name">Angela Gray</span> followed you<span class="dot nodot"></span>
+          <div class="timepassed">5m ago</div>
+        </div>
+      </div>
+
+      <div class="comment unreadcomment">
+        <div><img src="assets\images\avatar-jacob-thompson.webp"
+            width="50px"></img></div>
+        <div class="comment-text"><span class="name">Jacob Thompson</span> has joined your group <span
+            class="name2">Chess Club</span></span><span class="dot nodot"></span>
+          <div class="timepassed">1 day ago</div>
+        </div>
+      </div>
+
+      <div class="comment unreadcomment">
+        <div><img src="assets\images\avatar-rizky-hasanuddin.webp"
+            width="50px"></img></div>
+        <div class="comment-text"><span class="name">Rizky Hasanuddin</span> sent you a private message</span><span
+            class="dot nodot"></span>
+          <div class="timepassed">5 days ago</div>
+          <div class="message">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+            I'm already having lots of fun and improving my game.</div>
+        </div>
+      </div>
+
+
+      <div class="comment unreadcomment">
+        <div><img src="assets\images\avatar-kimberly-smith.webp"
+            width="50px"></img></div>
+        <div class="comment-text"><span class="name">Kimberly Smith</span> commented on your picture</span><span
+            class="dot nodot"></span>
+          <div class="timepassed">1 week ago</div>
+        </div>
+        <div class="totheright pichover"><img
+            src="assets\images\image-chess.webp" alt="" width="50px"></div>
+      </div>
+
+      <div class="comment unreadcomment">
+        <div><img src="assets\images\avatar-nathan-peterson.webp"
+            width="50px"></img></div>
+        <div class="comment-text"><span class="name"> Nathan Peterson</span> reacted to your recent post <span
+            class="name2">5 end-game
+            strategies to increase your win rate</span></span><span class="dot nodot"></span>
+          <div class="timepassed">2 weeks ago</div>
+        </div>
+      </div>
+
+      <div class="comment unreadcomment">
+        <div><img src="assets\images\avatar-anna-kim.webp"
+            width="50px"></img>
+        </div>
+        <div class="comment-text"><span class="name"> Kim</span> left the group <span class="name2">Chess
+            Club</span><span class="dot nodot"></span>
+          <div class="timepassed">2 weeks ago</div>
+        </div>
+      </div>
+
+  </div>
+  </section>
+</body>
+</div>
+
+<script>
+
+  function notification() {
+    let notification = document.querySelectorAll(".dot").length
+    document.getElementById("note").innerHTML = notification
+  }
+  notification()
+
+
+  let comments = document.querySelectorAll(".comment");
+  for (comment of comments) {
+    comment.addEventListener("click", function () {
+
+      this.setAttribute("data-clicked", "true");
+      let nodot = this.querySelectorAll(".nodot");
+      nodot[0].setAttribute("data-clicked", "true");
+
+      if (this.dataset.clicked) {
+        this.classList.toggle("unreadcomment");
+        nodot[0].classList.toggle("dot")
+        notification()
+      }
+
+    })
+
+  }
+
+  let unreadcomments = document.querySelectorAll(".unreadcomment")
+  let dots = document.querySelectorAll(".dot")
+  document.getElementById("allread").addEventListener("click", function () {
+    unreadcomments.forEach((unreadcomment) => unreadcomment.classList.remove("unreadcomment"))
+    dots.forEach((dot) => dot.classList.remove("dot"))
+    document.getElementById("note").innerHTML = 0;
+
+  }
+  )
+
+
+
+
+</script>
+</body>
+
+</html>
